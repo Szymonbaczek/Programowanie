@@ -14,6 +14,8 @@ Scripts in **body**
 If you don't want your script to be placed inside a function or if your script should write page content, it should be placed in the body section.
 
 (approved by W3Schools)
+### What change in script loading when you put HTML properties:async, defer, x  to script tag?
+
 ## How to make the same result without script, just with css and html [ascroll to particular part of site using id anchors in URL]?
 It's simple! 
 First we have to create an anchor (the place we want to scroll) by adding one of those:
