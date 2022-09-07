@@ -1,0 +1,32 @@
+body
+{
+    background-color: gray;
+    font-family: Verdana;
+    font-size: 20px;
+    color: white;
+}
+
+/* To connect CSS with HTML we have to add this to ,,head" in HTML:
+
+<link rel="stylesheet" href="css file name" type="text/css"/> */
+
+h1
+{
+    font-size: 48px;
+}
+
+/*Unvisited*/
+a:link
+{
+    color: yellow;
+}
+/*Already visited*/
+a:visited
+{
+    color: yellow;
+}
+/* Hover over*/
+a:hover
+{
+    color:red;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Automotive catalog</title>
+	<meta name="description" content="Create your dream car model!">
+	<meta name="keywords" content="car, catalog, car showroom, new car">
+	<meta name="author" content="John Novak">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="style(05.09.22).css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+
+	<header>
+	
+		<h1>Choose car configuration</h1>
+
+	</header>
+	
+	<main>
+	
+		<article>
+		
+			<form action="order.php" method="post" enctype="multipart/form-data">
+
+				<div class="row">
+					<fieldset>
+
+						<legend>Body type</legend>
+
+						<div><label><input type="radio" value="1" name="body" checked> Hatchback </label></div> 
+						<div><label><input type="radio" value="2" name="body"> Cabrio </label></div> 
+						<div><label><input type="radio" value="3" name="body"> Combi </label></div>
+
+					</fieldset>
+				</div>
+
+				<div class="row">
+					<label for="engine">Engine type</label>
+					<select id="engine" name="engine">
+
+						<option value="d">diesel</option>
+						<option value="g" selected>gasoline</option>
+						<option value="e">electrical</option>
+						<option value="h">hybrid</option>
+
+					</select>
+				</div>
+
+				<div class="row">
+
+					<fieldset>
+						<legend>Accesories</legend>
+
+						<div class="col">
+							<div><label><input type="checkbox" name="eq[]" value="1" disabled checked> conditioning </label></div>
+							<div><label><input type="checkbox" name="eq[]" value="2" disabled checked> systems: ESP & ABS </label></div>
+							<div><label><input type="checkbox" name="eq[]" value="3"> leather upholstery </label></div>
+							<div><label><input type="checkbox" name="eq[]" value="4"> cruise control </label></div>
+						</div>
+						
+						<div class="col">
+							<div><label><input type="checkbox" name="eq[]" value="5"> rear roof spoiler </label></div>
+							<div><label><input type="checkbox" name="eq[]" value="6"> bluetooth </label></div>
+							<div><label><input type="checkbox" name="eq[]" value="7"> foglights </label></div>
+							<div><label><input type="checkbox" name="eq[]" value="8"> tinted rear windows </label></div>
+						</div>
+						
+						<div class="col">
+							<div><label><input type="checkbox" name="eq[]" value="9"> parking sensors </label></div>
+							<div><label><input type="checkbox" name="eq[]" value="10"> heated seats </label></div>
+							<div><label><input type="checkbox" name="eq[]" value="11"> folding mirrors </label></div>
+							<div><label><input type="checkbox" name="eq[]" value="12"> LED daytime running lights </label></div>
+						</div>
+
+						<div class="row">
+				
+							<label for="smell"> What smell? </label>
+							
+							<div style="margin-top:10px;">
+								<select id="smell" name="smell[]" multiple size="4">
+								
+									<option value="c">coconut</option>
+									<option value="l" selected>lemon</option>
+									<option value="s">strawberry</option>
+									<option value="p">peach</option>
+								
+								</select>
+							</div>
+						
+						</div>
+
+						<div class="row">
+				
+							<label> Name <input type="text" name="name" placeholder="What's your name?"></label>
+							<label> Password <input type="password" name="password"></label>
+							<label> Search <input type="search" name="phraze"></label>
+						
+						</div>
+						
+						<div class="row">
+							<label> How many keys <input type="number" name="key" step="1"></label>
+						</div>
+						
+						<div class="row">
+							<label> E-mail adress <input type="email" name="adress" required ></label>
+							<label> Phone number <input type="tel" name="phone" required></label>
+						</div>
+
+						<div class="row">
+							<label> Delivery date <input type="date" name="day"></label>
+							<label> Preffered delivery time <input type="time" name="time" step="1" min="09:00" max="18:00"></label>
+						</div>
+
+						<div class="row">
+							<div>
+								<label for="comment">Order notes</label>
+							</div>
+							<textarea name="comment" id="comment" rows="4" cols="80" maxlength="25" minlength="10"></textarea>
+						</div>
+
+						<div class="row">
+							<label>Upload image of your previous car</label><input type="file" name="image" accept="image/x-png,image/gif,image/jpeg">
+						</div>
+
+						<div class="row">
+							<label> Paint color <input type="color" name="color"></label>
+						</div>
+
+						<div class="row">
+							<label>Progress of the order's realisation</label> <progress id="realisation" max="100" value="75" ></progress>
+						</div>
+
+						<div class="row">
+							<label>Level of fueling of the car</label><meter min="0" max="100" title="percentage" value="30" low="30" high="70" optimum="75"></meter>
+						</div>
+
+						<div class="row">
+							<label>Your website</label><input type="url" name="website">
+						</div>
+
+						<input type="hidden" name="token" value="123415jlnj213bjl1">
+
+						<div class="row">
+							<input type="submit" value="Order!">
+							<!-- <input type="button" value="Order!">
+							<button type="button">Order!</button> -->
+						</div>
+
+						<input type="reset" value="Clear">
+
+						
+					
+					</fieldset>
+
+				</div>
+
+			</form>		
+			
+		</article>
+		
+	</main>
+
+</body>
+</html>

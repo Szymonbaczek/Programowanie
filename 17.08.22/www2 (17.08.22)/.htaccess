@@ -1,0 +1,12 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule hire-web-developer index.html
+RewriteRule who-am-i whoami.html
+RewriteRule offer-creating-website-www offer.html
+RewriteRule cv-developer-php-javascript cv.html
+RewriteRule contact-web-developer-php contact.html
